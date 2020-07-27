@@ -1,9 +1,7 @@
 <header>
   <h2>Add Media to Watch</h2>
 </header>
-<form
-  [formGroup]="form"
-  (ngSubmit)="onSubmit(form.value)">
+<form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
   <ul>
     <li>
       <label for="medium">Medium</label>
@@ -32,5 +30,5 @@
       <input type="text" name="year" id="year" maxlength="4" formControlName="year">
     </li>
   </ul>
-  <button type="submit">Save</button>
+  <button type="submit" [disabled]="!form.valid">Save</button>
 </form>
