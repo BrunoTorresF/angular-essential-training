@@ -5,4 +5,9 @@ import { Component } from '@angular/core';
   templateUrl: './media-item-form.component.html',
   styleUrls: ['./media-item-form.component.css']
 })
-export class MediaItemFormComponent {}
+export class MediaItemFormComponent {
+
+  onSubmit(mediaItem) {
+    console.log(mediaItem);
+  }
+}
